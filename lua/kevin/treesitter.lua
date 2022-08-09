@@ -4,7 +4,16 @@ if not status_ok then
 end
 
 treesitter_configs.setup {
-  ensure_installed = "all",
+  ensure_installed = {
+      "python",
+      "c",
+      "lua",
+      "cpp",
+      "bash",
+      "javascript",
+      "typescript",
+      "json",
+  },
   sync_install = false,
   ignore_install = {""},
   highlight = {

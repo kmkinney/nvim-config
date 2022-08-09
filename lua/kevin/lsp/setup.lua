@@ -6,7 +6,7 @@ end
 
 -- Add reference higlighting
 local function lsp_add_highlights(client)
-  if client.resolved_capabilities.document_highlight then
+  if client.server_capabilities.document_highlight then
     vim.api.nvim_exec(
       [[
       augroup lsp_document_highlight
