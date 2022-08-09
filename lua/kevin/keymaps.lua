@@ -15,6 +15,7 @@ local normal = {
  ["<leader>ff"] = "<cmd>lua require'telescope.builtin'.find_files()<CR>",
  ["<leader>fg"] = "<cmd>lua require'telescope.builtin'.live_grep()<CR>",  -- depends on ripgrep
  ["<C-s>"] = ":w<CR>",
+ -- ["<C-_>"] = "<cmd>lua print('hi')<CR>",
  ["∆"] = ":m .+1<CR>", -- For mac
  ["˚"] = ":m .-2<CR>", -- For mac
  ["<A-j>"] = ":m .+1<CR>",
