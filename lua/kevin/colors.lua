@@ -1,6 +1,6 @@
 -- Colorschemes
 vim.opt.background = "dark"
-vim.g.everforest_background = "hard"
+vim.g.everforest_background = "soft"
 local colorscheme = "everforest"
 local default = "slate"
 -- safe way to prevent errors

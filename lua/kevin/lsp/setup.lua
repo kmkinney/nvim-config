@@ -27,6 +27,7 @@ local function lsp_set_keymaps(bufn)
   keymap("n", "gd", vim.lsp.buf.definition, opt)
   keymap("n", "gt", vim.lsp.buf.type_definition, opt)
   keymap("n", "gi", vim.lsp.buf.implementation, opt)
+  keymap("n", "<leader>d", vim.diagnostic.open_float, opt)
   vim.cmd[[ command! Format execute 'lua vim.lsp.buf.formatting()']]
 end
 
@@ -46,7 +47,7 @@ local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_clie
 local handlers = {
   ["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
-      virtual_text = false
+      virtual_text = true
     }
   )
 }
@@ -64,3 +65,21 @@ lspconfig.pyright.setup({
   capabilities = capabilities,
   handlers = handlers
 })
+
+lspconfig.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  handlers = handlers
+}
+
+lspconfig.html.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  handlers = handlers
+}
+
+lspconfig.cssls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  handlers = handlers
+}

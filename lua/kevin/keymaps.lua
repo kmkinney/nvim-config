@@ -9,21 +9,31 @@ vim.g.maplocalleader = " "
 
 -- Mappings for normal mode
 local normal = {
- ["<leader>r"] = ":source %<CR>",
- ["<leader>t"] = ":NvimTreeToggle<CR>",
- ["<leader>e"] = ":NvimTreeFocus<CR>",
- ["<leader>ff"] = "<cmd>lua require'telescope.builtin'.find_files()<CR>",
- ["<leader>fg"] = "<cmd>lua require'telescope.builtin'.live_grep()<CR>",  -- depends on ripgrep
- ["<C-s>"] = ":w<CR>",
- -- ["<C-_>"] = "<cmd>lua print('hi')<CR>",
- ["∆"] = ":m .+1<CR>", -- For mac
- ["˚"] = ":m .-2<CR>", -- For mac
- ["<A-j>"] = ":m .+1<CR>",
- ["<A-k>"] = ":m .-2<CR>",
- ["<C-j>"] = "<C-w><C-j>",
- ["<C-k>"] = "<C-w><C-k>",
- ["<C-h>"] = "<C-w><C-h>",
- ["<C-l>"] = "<C-w><C-l>",
+ -- Leader keys
+  ["<leader>r"] = ":source %<CR>", -- reload lua file
+  ["<leader>e"] = ":NvimTreeToggle<CR>",
+  ["<leader>ff"] = "<cmd>lua require'telescope.builtin'.find_files()<CR>",
+  ["<leader>fg"] = "<cmd>lua require'telescope.builtin'.live_grep()<CR>",  -- depends on ripgrep
+  ["<leader>fd"] = "<cmd>lua require'telescope.builtin'.diagnostics()<CR>",
+  ["<leader>ok"] = "<cmd>e $HOME/.config/nvim/lua/kevin/keymaps.lua<CR>",
+  ["<leader>c"] = "<cmd>bd<CR>",
+  ["<leader>j"] = "<cmd>bn<CR>",
+  ["<leader>k"] = "<cmd>bp<CR>",
+  -- Normal Mappings
+  ["<C-s>"] = ":w<CR>",
+  -- ["<C-_>"] = "<cmd>lua print('hi')<CR>",
+  ["∆"] = ":m .+1<CR>", -- For mac
+  ["˚"] = ":m .-2<CR>", -- For mac
+  ["<A-j>"] = ":m .+1<CR>",
+  ["<A-k>"] = ":m .-2<CR>",
+  ["<C-j>"] = "<C-w><C-j>",
+  ["<C-k>"] = "<C-w><C-k>",
+  ["<C-h>"] = "<C-w><C-h>",
+  ["<C-l>"] = "<C-w><C-l>",
+  ["j"] = "gj",
+  ["k"] = "gk",
+  -- Terminal commands
+  ["<leader>py"] = "<cmd>lua _PYTHON_TERMINAL()<CR>"
 }
 
 -- Mappings for insert mode
@@ -38,13 +48,15 @@ local visual = {
   ["˚"] = ":m .-2<CR>==",
   ["<"] = "<gv",
   [">"] = ">gv",
-  ["<leader>kj"] = "<ESC>"
+  ["<leader>kj"] = "<ESC>",
+  ["<C-s>"] = "<ESC><cmd>w<CR>"
 }
 
 -- Mappings for visual block mode
 local visual_block = {
-  ["J"] = ":m '>+1<CR>gv-gv",
-  ["K"] = ":m '<-2<CR>gv-gv"
+  ["<C-J>"] = ":m '>+1<CR>gv-gv",
+  ["<C-K>"] = ":m '<-2<CR>gv-gv",
+  ["<C-s>"] = "<ESC><cmd>w<CR>"
 }
 
 -- Mappings for terminal mode
@@ -52,7 +64,8 @@ local term = {}
 
 -- Mappings for command mode
 local command = {
-  ["W"] = "w" -- because I do this all the time
+  ["W"] = "w", -- because I do this all the time
+  ["Q"] = "q" -- because I do this all the time
 }
 
 local modes = {

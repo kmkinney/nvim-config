@@ -87,7 +87,7 @@ return packer.startup(function(use)
 
 
 	-- Git
-	--use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
+	use "lewis6991/gitsigns.nvim"
 
   -- Future Plugins
 	--use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
