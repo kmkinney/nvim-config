@@ -19,6 +19,8 @@ local normal = {
   ["<leader>c"] = "<cmd>bd<CR>",
   ["<leader>j"] = "<cmd>bn<CR>",
   ["<leader>k"] = "<cmd>bp<CR>",
+  ["<leader>t"] = "<cmd>tabnext<CR>",
+
   -- Normal Mappings
   ["<C-s>"] = ":w<CR>",
   -- ["<C-_>"] = "<cmd>lua print('hi')<CR>",
