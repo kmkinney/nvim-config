@@ -12,18 +12,19 @@ local normal = {
  -- Leader keys
   ["<leader>r"] = ":source %<CR>", -- reload lua file
   ["<leader>e"] = ":NvimTreeToggle<CR>",
-  ["<leader>ff"] = "<cmd>lua require'telescope.builtin'.find_files()<CR>",
-  ["<leader>fg"] = "<cmd>lua require'telescope.builtin'.live_grep()<CR>",  -- depends on ripgrep
-  ["<leader>fd"] = "<cmd>lua require'telescope.builtin'.diagnostics()<CR>",
-  ["<leader>ok"] = "<cmd>e $HOME/.config/nvim/lua/kevin/keymaps.lua<CR>",
   ["<leader>c"] = "<cmd>bd<CR>",
   ["<leader>j"] = "<cmd>bn<CR>",
   ["<leader>k"] = "<cmd>bp<CR>",
   ["<leader>t"] = "<cmd>tabnext<CR>",
+  ["<leader>ok"] = "<cmd>e $HOME/.config/nvim/lua/kevin/keymaps.lua<CR>",
+-- Telescope
+  ["<leader>ff"] = "<cmd>lua require'telescope.builtin'.find_files()<CR>",
+  ["<leader>fg"] = "<cmd>lua require'telescope.builtin'.live_grep()<CR>",  -- depends on ripgrep
+  ["<leader>fd"] = "<cmd>lua require'telescope.builtin'.diagnostics()<CR>",
+  -- ["<leader>oo"] = "<cmd>e $HOME/.config/nvim/lua/kevin/options.lua<CR>",
 
   -- Normal Mappings
   ["<C-s>"] = ":w<CR>",
-  -- ["<C-_>"] = "<cmd>lua print('hi')<CR>",
   ["∆"] = ":m .+1<CR>", -- For mac
   ["˚"] = ":m .-2<CR>", -- For mac
   ["<A-j>"] = ":m .+1<CR>",
@@ -34,6 +35,7 @@ local normal = {
   ["<C-l>"] = "<C-w><C-l>",
   ["j"] = "gj",
   ["k"] = "gk",
+
   -- Terminal commands
   ["<leader>py"] = "<cmd>lua _PYTHON_TERMINAL()<CR>"
 }
@@ -46,8 +48,8 @@ local insert = {
 
 -- Mappings for visual line mode
 local visual = {
-  ["∆"] = ":m .+1<CR>==",
-  ["˚"] = ":m .-2<CR>==",
+  ["∆"] = ":m .+1<cr>==",
+  ["˚"] = ":m .-2<cr>==",
   ["<"] = "<gv",
   [">"] = ">gv",
   ["<leader>kj"] = "<ESC>",
