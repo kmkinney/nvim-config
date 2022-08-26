@@ -17,10 +17,13 @@ local normal = {
   ["<leader>k"] = "<cmd>bp<CR>",
   ["<leader>t"] = "<cmd>tabnext<CR>",
   ["<leader>ok"] = "<cmd>e $HOME/.config/nvim/lua/kevin/keymaps.lua<CR>",
+  ["<leader>hc"] = "<cmd>nohlsearch<CR>",
 -- Telescope
   ["<leader>ff"] = "<cmd>lua require'telescope.builtin'.find_files()<CR>",
   ["<leader>fg"] = "<cmd>lua require'telescope.builtin'.live_grep()<CR>",  -- depends on ripgrep
   ["<leader>fd"] = "<cmd>lua require'telescope.builtin'.diagnostics()<CR>",
+  ["<leader>fb"] = "<cmd>lua require'telescope.builtin'.buffers()<CR>",
+  ["<leader>fh"] = "<cmd>lua require'telescope.builtin'.help_tags()<CR>",
   -- ["<leader>oo"] = "<cmd>e $HOME/.config/nvim/lua/kevin/options.lua<CR>",
 
   -- Normal Mappings
